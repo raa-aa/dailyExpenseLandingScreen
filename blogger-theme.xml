@@ -304,7 +304,7 @@
     </header>
 
     <b:section id='main' class='main' showaddelement='no'>
-        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
             <b:includable id='main' var='top'>
                 <b:if cond='data:view.isHomepage'>
                     <!-- Homepage Landing -->
@@ -413,6 +413,41 @@
                         <div class='post-footer-line post-footer-line-3'/>
                     </div>
                 </div>
+            </b:includable>
+
+            <b:includable id='nextprev'>
+              <div class='blog-pager' id='blog-pager'>
+              </div>
+            </b:includable>
+
+            <b:includable id='backlinks'>
+            </b:includable>
+
+            <b:includable id='comment-form'>
+            </b:includable>
+
+            <b:includable id='backlinkDeleteIcon'>
+            </b:includable>
+
+            <b:includable id='postQuickEdit'>
+            </b:includable>
+
+            <b:includable id='shareButtons'>
+            </b:includable>
+
+            <b:includable id='status-message'>
+            </b:includable>
+
+            <b:includable id='commentDeleteIcon'>
+            </b:includable>
+
+            <b:includable id='feedLinks'>
+            </b:includable>
+
+            <b:includable id='feedLinksBody'>
+            </b:includable>
+
+            <b:includable id='comments' var='post'>
             </b:includable>
         </b:widget>
     </b:section>
