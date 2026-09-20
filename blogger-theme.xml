@@ -371,12 +371,19 @@
                 <b:section id='main' class='main' showaddelement='no'>
                     <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
                         <b:includable id='main' var='top'>
-                            <b:loop values='data:posts' var='post'>
-                                <h1 class="post-title"><data:post.title/></h1>
-                                <div class="post-body">
-                                    <data:post.body/>
-                                </div>
-                            </b:loop>
+                            <b:if cond='data:posts.empty'>
+                                <p>No posts found.</p>
+                            <b:else/>
+                                <b:loop values='data:posts' var='post'>
+                                    <b:include data='post' name='post'/>
+                                </b:loop>
+                            </b:if>
+                        </b:includable>
+                        <b:includable id='post' var='post'>
+                            <h1 class="post-title"><data:post.title/></h1>
+                            <div class="post-body">
+                                <data:post.body/>
+                            </div>
                         </b:includable>
                     </b:widget>
                 </b:section>
